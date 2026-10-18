@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 const perle = [
   'La vacca strana in mezzo alla via ha fatto la cacca: poesia.',
@@ -60,8 +60,7 @@ function fraseDelGiorno() {
 }
 
 export default function Home() {
-  const indiceIniziale = useMemo(fraseDelGiorno, []);
-  const [indice, setIndice] = useState(indiceIniziale);
+  const indice = useMemo(fraseDelGiorno, []);
 
   return (
     <main className="pagina">
@@ -82,19 +81,19 @@ export default function Home() {
         <p className="occhiello">la perla quotidiana di Moka</p>
 
         <div className="scena">
-          <div className="fumetto" role="status" aria-live="polite">
-            <p>“{perle[indice]}”</p>
+          <div className="fumetto">
+            <span className="moka-dice">Moka dice:</span>
+            <p>{perle[indice]}</p>
           </div>
-          <img className="moka" src="/moka.png" alt="Moka con gli occhiali da sole e uno spritz" />
+          <img className="moka" src="/moka-v2.png" alt="Moka con gli occhiali da sole e uno spritz" />
         </div>
 
-        <button
-          className="altra-perla"
-          type="button"
-          onClick={() => setIndice((corrente) => (corrente + 1) % perle.length)}
-        >
-          dammene un’altra 🐾
-        </button>
+        <nav className="menu-pagine" aria-label="Le pagine del mondo di Rebi">
+          <a className="tasto-pagina rosso" href="/ricordi">I nostri ricordi</a>
+          <a className="tasto-pagina verde" href="/scommesse">Scommesse</a>
+          <a className="tasto-pagina blu" href="/pagina-3">Pagina 3</a>
+          <a className="tasto-pagina ocra" href="/pagina-4">Pagina 4</a>
+        </nav>
         <p className="firma">consigli non richiesti • eleganza discutibile</p>
       </section>
     </main>
