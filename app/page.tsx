@@ -90,7 +90,7 @@ export default function Home() {
 
         <nav className="menu-pagine" aria-label="Le pagine del mondo di Rebi">
           <a className="tasto-pagina rosso" href="/ricordi">I nostri ricordi</a>
-          <a className="tasto-pagina verde" href="/scommesse">Scommesse</a>
+          <a className="tasto-pagina verde" href="/where-is-moki">Where is Moki?</a>
           <a className="tasto-pagina blu" href="/pagina-3">Pagina 3</a>
           <a className="tasto-pagina ocra" href="/pagina-4">Pagina 4</a>
         </nav>

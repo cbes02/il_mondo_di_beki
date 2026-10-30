@@ -332,6 +332,116 @@ button, input { font: inherit; }
 
 .torna-ricordi { position: relative; z-index: 40; flex: 0 0 auto; }
 
+.pagina-moki {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: max(14px, env(safe-area-inset-top)) 14px max(18px, env(safe-area-inset-bottom));
+  overflow-x: hidden;
+}
+
+.moki-game {
+  width: min(100%, 620px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moki-header { width: 100%; text-align: center; }
+.moki-kicker {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 12px;
+  border: 2px solid var(--inchiostro);
+  border-radius: 999px;
+  background: rgba(255,246,218,.88);
+  font: 900 10px/1 'Trebuchet MS', sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.moki-header h1 {
+  margin: 7px 0 8px;
+  color: var(--rosso);
+  text-shadow: 0 3px 0 #fff0c9;
+  font: 900 clamp(34px, 10vw, 48px)/.95 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
+}
+.moki-progress { display: flex; justify-content: center; gap: 5px; margin-bottom: 12px; }
+.moki-progress span { width: 18px; height: 7px; border: 1px solid var(--inchiostro); border-radius: 99px; background: rgba(255,248,224,.7); }
+.moki-progress span.attivo { background: var(--rosso); }
+
+.moki-scena {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 4px solid var(--inchiostro);
+  border-radius: 18px;
+  background: #dfbd82;
+  box-shadow: 0 8px 0 var(--inchiostro), 0 16px 28px rgba(59,33,25,.28);
+  cursor: crosshair;
+  -webkit-tap-highlight-color: transparent;
+}
+.moki-scena img { display: block; width: 100%; height: auto; user-select: none; pointer-events: none; }
+.moki-errore, .moki-trovata {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 3px solid #fff8df;
+  border-radius: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 0 var(--inchiostro);
+  font: 900 25px/1 'Arial Rounded MT Bold', sans-serif;
+  pointer-events: none;
+}
+.moki-errore { background: #b5362e; animation: errore-pop .25s ease; }
+.moki-trovata { width: 48px; height: 48px; background: #2f7547; animation: trovato-pop .4s cubic-bezier(.2,.9,.3,1.5); }
+
+.moki-messaggio {
+  min-height: 43px;
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: 2px solid var(--inchiostro);
+  border-radius: 999px;
+  background: rgba(255,248,224,.9);
+  font: 900 14px/1.25 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+.moki-messaggio.successo { color: #164c2c; background: #ddf0d5; }
+.moki-messaggio.riprova { color: #7e211d; }
+.moki-avanti, .moki-finale button {
+  margin: 12px 0 4px;
+  padding: 13px 22px;
+  border: 3px solid var(--inchiostro);
+  border-radius: 999px;
+  color: #fff8df;
+  background: #2f5b43;
+  box-shadow: 0 5px 0 var(--inchiostro);
+  font: 900 15px/1 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
+}
+.torna-moki { margin-top: 14px; }
+
+.moki-finale {
+  width: min(100%, 460px);
+  margin: auto;
+  padding: 40px 24px;
+  border: 4px solid var(--inchiostro);
+  border-radius: 30px;
+  background: rgba(255,248,224,.95);
+  box-shadow: 9px 11px 0 rgba(59,33,25,.28);
+  text-align: center;
+}
+.moki-medaglia { font-size: 72px; }
+.moki-finale h1 { margin: 8px 0; color: var(--rosso); font: 900 38px/1 'Arial Rounded MT Bold', sans-serif; }
+.moki-finale p { font: 700 17px/1.4 'Trebuchet MS', sans-serif; }
+
+@keyframes errore-pop { from { opacity: 0; transform: translate(-50%, -50%) scale(.5); } }
+@keyframes trovato-pop { from { opacity: 0; transform: translate(-50%, -50%) scale(.2) rotate(-30deg); } }
+
 @media (max-height: 720px) {
   .mazzo-foto { min-height: 350px; width: min(70vw, 300px); }
   .ricordi-intestazione h1 { font-size: 30px; }
