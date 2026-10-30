@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Ricordi from './Ricordi';
 
 const titoli: Record<string, string> = {
   ricordi: 'I nostri ricordi',
@@ -10,6 +11,16 @@ const titoli: Record<string, string> = {
 export default async function Sezione({ params }: { params: Promise<{ sezione: string }> }) {
   const { sezione } = await params;
   const titolo = titoli[sezione] ?? 'Pagina in arrivo';
+
+  if (sezione === 'ricordi') {
+    return (
+      <main className="pagina pagina-ricordi">
+        <div className="sfondo" aria-hidden="true" />
+        <Ricordi />
+        <Link className="torna-home torna-ricordi" href="/">← Torna da Moka</Link>
+      </main>
+    );
+  }
 
   return (
     <main className="pagina pagina-interna">
