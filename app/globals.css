@@ -245,6 +245,98 @@ button, input { font: inherit; }
   font: 900 15px/1 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
 }
 
+.pagina-abi {
+  min-height: 100svh;
+  padding: max(20px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+  overflow: visible;
+}
+
+.abi-wrap {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: 24px 16px 28px;
+  border: 3px solid var(--inchiostro);
+  border-radius: 28px;
+  background: rgba(255,247,222,.94);
+  box-shadow: 9px 11px 0 rgba(59,33,25,.24);
+}
+
+.abi-intestazione { text-align: center; }
+.abi-intestazione > span { font-size: 26px; }
+.abi-intestazione h1 {
+  margin: 4px 0 9px;
+  color: var(--rosso);
+  text-shadow: 0 3px 0 #fff0c9;
+  font: 900 clamp(34px, 10vw, 48px)/.95 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
+  letter-spacing: -.04em;
+}
+.abi-intestazione p {
+  display: inline-block;
+  margin: 0;
+  padding: 7px 12px;
+  border: 2px solid rgba(59,33,25,.38);
+  border-radius: 999px;
+  background: #f2d98f;
+  font: 800 11px/1.15 'Trebuchet MS', sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.lista-abi {
+  margin: 24px 0 20px;
+  padding: 0;
+  list-style: none;
+  counter-reset: prove;
+  display: grid;
+  gap: 13px;
+}
+.lista-abi li {
+  position: relative;
+  counter-increment: prove;
+  padding: 18px 15px 17px 54px;
+  border: 2px solid var(--inchiostro);
+  border-radius: 18px;
+  background: rgba(255,252,237,.94);
+  box-shadow: 4px 5px 0 rgba(59,33,25,.18);
+  font: 600 15px/1.43 'Trebuchet MS', sans-serif;
+}
+.lista-abi li::before {
+  content: counter(prove);
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--inchiostro);
+  border-radius: 50%;
+  color: #fff8df;
+  background: var(--rosso);
+  font: 900 16px/1 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
+}
+.lista-abi li:nth-child(3n + 2)::before { background: #2f5b43; }
+.lista-abi li:nth-child(3n)::before { background: #263e68; }
+.lista-abi strong { color: #8f2925; font-weight: 900; }
+
+.finale-abi {
+  margin: 0 0 24px;
+  padding: 22px 18px;
+  border: 3px solid var(--inchiostro);
+  border-radius: 22px;
+  color: #fff8df;
+  background: #2f5b43;
+  box-shadow: 6px 7px 0 var(--inchiostro);
+  text-align: center;
+  font: 900 19px/1.25 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
+}
+.torna-abi { display: block; width: max-content; margin: 0 auto; }
+
+@media (min-width: 700px) {
+  .abi-wrap { padding: 34px 32px 36px; }
+  .lista-abi li { font-size: 16px; }
+}
+
 .pagina-ricordi {
   min-height: 100svh;
   display: flex;
