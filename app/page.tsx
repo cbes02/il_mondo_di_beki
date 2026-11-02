@@ -92,7 +92,7 @@ export default function Home() {
           <a className="tasto-pagina rosso" href="/ricordi">I nostri ricordi</a>
           <a className="tasto-pagina verde" href="/where-is-moki">Where is Moki?</a>
           <a className="tasto-pagina blu" href="/abi-puo-tutto">Perché la Rebi può fare tutto</a>
-          <a className="tasto-pagina ocra" href="/pagina-4">Pagina 4</a>
+          <a className="tasto-pagina ocra" href="/abbracci-virtuali">Abbracci virtuali</a>
         </nav>
         <p className="firma">consigli non richiesti • eleganza discutibile</p>
       </section>
