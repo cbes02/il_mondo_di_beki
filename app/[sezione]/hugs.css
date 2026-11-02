@@ -1,0 +1,8 @@
+.hugs { overflow: hidden; text-align: center; }
+.hug-sky { position: relative; height: min(56svh, 500px); margin: 20px 0 15px; overflow: hidden; border: 3px solid #3b2119; border-radius: 28px; background: linear-gradient(180deg, #f8c9cc, #fff0d4 62%, #d9b7cc); box-shadow: inset 0 0 35px #fff9, 0 8px #3b2119; }
+.hug { position: absolute; left: var(--x); bottom: -80px; font-size: var(--size); filter: drop-shadow(0 5px 5px #6e303744); animation: float-hug var(--d, 6s) linear var(--delay, 0s) infinite; user-select: none; }
+.hug-new { --d: 4s; --delay: 0s; animation-iteration-count: 1; }
+.hug-button { width: 100%; padding: 16px 18px; border: 3px solid #3b2119; border-radius: 999px; color: #fff8df; background: #b5362e; box-shadow: 0 6px #3b2119; font: 900 17px 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif; cursor: pointer; }
+.hug-button:active { transform: translateY(5px); box-shadow: 0 1px #3b2119; }
+.hug-count { min-height: 24px; margin: 17px 0 0; font: 800 14px 'Trebuchet MS', sans-serif; }
+@keyframes float-hug { 0% { transform: translate(-50%, 0) rotate(-8deg); opacity: 0; } 10% { opacity: 1; } 50% { transform: translate(calc(-50% + 16px), -32vh) rotate(10deg); } 90% { opacity: 1; } 100% { transform: translate(calc(-50% - 10px), -66vh) rotate(-6deg); opacity: 0; } }
