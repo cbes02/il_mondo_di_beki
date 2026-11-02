@@ -2,4 +2,8 @@
 
 La perla quotidiana di Moka: saggezza discutibile, ogni giorno.
 
-Sito: https://il-mondo-di-rebi.greentoast4.chatgpt.site
+## Sito pubblicato con GitHub Pages
+
+https://cbes02.github.io/il_mondo_di_beki/
+
+Il sito funziona direttamente da questo repository, senza dipendere da ChatGPT Sites.
