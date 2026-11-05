@@ -2,9 +2,12 @@
 
 import { useState } from 'react';
 
-const foto = Array.from({ length: 17 }, (_, indice) =>
-  `/ricordi/${String(indice + 1).padStart(2, '0')}.jpeg`,
-);
+const foto = [
+  '/ricordi/00.jpeg',
+  ...Array.from({ length: 17 }, (_, indice) =>
+    `/ricordi/${String(indice + 1).padStart(2, '0')}.jpeg`,
+  ),
+];
 
 const rotazioni = [-2.4, 2.1, -1.2, 1.5, -0.7];
 
